@@ -1,3 +1,5 @@
+// stack 직접 구현
+
 class Stack {
   constructor() {
     this.arr = [];
