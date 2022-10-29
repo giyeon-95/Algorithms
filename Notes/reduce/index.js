@@ -1,8 +1,10 @@
 /*
+reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;
+reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
 
-reduce : 4가지 인수를 받는다.
+reduce : reduce callback 함수는 4가지 인수를 받는다.
 
-arr.reduce(callback, [, initialValue])
+arr.reduce(callback, initialValue)
 
 1. accumulator : callback 함수의 반환값을 누적
 2. currentValue : 배열의 현재 요소 
