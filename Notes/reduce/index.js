@@ -12,6 +12,8 @@ arr.reduce(callback, initialValue)
 4. array : 호출한 배열
 
 initialValue는 Option사항 이며, 초기값을 제공하지 않을경우 배열의 첫 번째 요소를 사용한다.
+(즉, initVal을 지정하지 않으면 reduce내의 반복은 배열의 크기 -1 번만큼 실행되며, 
+  지정하게 되면 배열의 크기만큼 실행된다. )
 
 return 값 : 배열을 순서대로 불러 각 요소에 대해 callback 함수를 실행한 결과를 누적한 값.
 
@@ -22,10 +24,11 @@ return 값 : 배열을 순서대로 불러 각 요소에 대해 callback 함수�
 const numbers = [1, 2, 3, 4, 5];
 
 const sum1 = numbers.reduce((acc, currentNumber) => {
+  // console.log("실행됩니다.");
+  // console.log("acc : ", acc);
+  // console.log("cur : ", currentNumber);
   return acc + currentNumber;
 });
-
-// console.log(sum1); // 15
 
 //ex 2) 오브젝트 배열에서 원하는 항목의 값만 더하기
 
@@ -50,10 +53,17 @@ const friends = [
   },
 ];
 
-// const ageSum = friends.reduce((acc, current) => acc + current.age, 0);
+const ageSum = friends.reduce((acc, current) => {
+  // console.log("실행됩니다.");
+  // console.log("acc : ", acc);
+  // console.log("cur : ", current);
 
-// console.log(ageSum);
+  return acc + current.age;
+}, 0);
 
+console.log(ageSum);
+
+// reduce 직접 구현
 const reduce = (arr, callback, initialVal) => {
   for (let val of arr) {
     initialVal = callback(initialVal, val);

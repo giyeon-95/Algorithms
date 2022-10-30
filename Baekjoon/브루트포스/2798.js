@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const input = fs.readFileSync("input_example.txt").toString().split("\n");
+const input = fs.readFileSync("input.txt").toString().split("\n");
 
 input[0] = input[0].split(" ");
 

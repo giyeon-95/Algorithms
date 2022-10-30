@@ -1,6 +1,6 @@
 const str = "pikachu";
 
-//   substring(start: number, end?: number): string;
+//substring(start: number, end?: number): string;
 
 console.log(str.substring(1, 3)); //'ik'
 

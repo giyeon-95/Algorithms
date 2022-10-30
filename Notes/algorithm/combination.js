@@ -1,3 +1,22 @@
+/*
+
+input -> array, selectNumber (몇개의 묶음으로나눌건지)
+
+ex)
+input-
+[ 5, 6, 7, 8, 9 ], 3 
+
+output- 
+[
+  [ 5, 6, 7 ], [ 5, 6, 8 ],
+  [ 5, 6, 9 ], [ 5, 7, 8 ],
+  [ 5, 7, 9 ], [ 5, 8, 9 ],
+  [ 6, 7, 8 ], [ 6, 7, 9 ],
+  [ 6, 8, 9 ], [ 7, 8, 9 ]
+]
+
+*/
+
 function getCombination(array, selectNumber) {
   const resultArray = []; //조합으로 나눈 새 배열
 
