@@ -66,7 +66,7 @@ console.log(ageSum);
 // reduce 직접 구현
 const reduce = (arr, callback, initialVal) => {
   for (let val of arr) {
-    initialVal = callback(initialVal, val);
+    initialVal = callback(initialVal, val); //arr를 돌면서 initialVal, arr안의 val을 콜백함수로 돌려서 initialVal에 갱신
   }
 
   return initialVal;
