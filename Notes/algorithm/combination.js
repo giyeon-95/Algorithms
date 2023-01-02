@@ -1,5 +1,7 @@
 /*
 
+중복조합 
+
 input -> array, selectNumber (몇개의 묶음으로나눌건지)
 
 ex)
