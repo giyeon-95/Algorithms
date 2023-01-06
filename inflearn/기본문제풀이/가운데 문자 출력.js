@@ -7,12 +7,12 @@ function solution(str) {
   let answer = "";
 
   const isEven = str.length % 2 === 0;
+  const stringLength = str.length;
 
-  for (let val of str) {
-    if (isEven) {
-    } else {
-    }
-  }
+  if (isEven) {
+    answer += str[stringLength / 2 - 1];
+    answer += str[stringLength / 2];
+  } else answer = str[Math.floor(stringLength / 2)];
 
   return answer;
 }
